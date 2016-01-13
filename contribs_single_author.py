@@ -10,7 +10,7 @@ links = cPickle.load(open('save2.p', 'rb'))
 
 site = mwclient.Site('et.wikipedia.org')
 
-contribs = site.usercontributions('Chrloob')
+contribs = site.usercontributions(*)
 #pprint(contribs.uclimit())
 try:
     for counter in range(20):

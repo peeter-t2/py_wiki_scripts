@@ -21,3 +21,10 @@ To get additional information
 5. This userlist.csv can then be read by scriptone.R and used in the analysis to include the information on designated articles and when they were supposed to be completed. This is to eventually separate obligatory tasks on wikipedia from optional tasks
 
 The code gathers the links as in the original repository
+
+Added new function: to import all contributions within a wikipedia (must know total number of users which is hardcoded)' To test it, try for example 20 users, - results in allusers_20.csv at the moment.
+
+1. Run contribs_all_authors.py to create contribs_all.p
+2. Run convert_all.py to create allusers.csv
+3. This can be analyzed with script all_users.R (now stuck at getting the time series read)
+
