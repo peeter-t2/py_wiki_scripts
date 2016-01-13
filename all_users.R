@@ -18,14 +18,34 @@ merged_table <- data.table(merged)
 #merged_table["Kasutaja", "Aasta", "timestamp")]
 merged_table$timestamp3 = as.Date(strptime(merged_table$timestamp2, "%Y-%m-%dT%H:%M:%S"))
 
-table <- data.frame(timestamp = c(1,1,1,3,4,6), category= c("one", "two", "one", "one", "one", "one"))
 
 library(zoo)
 #add function to rolling average over unique within the timeframe...
 merged$zoo_time <-zoo(merged$timestamp2)
 rollapply(merged$timestamp, 1, FUN = function(x) unique(x)$maxdrawdownunique(merged$user))
 
-data.zoo<- zoo(table)
+
+# not rolling, but selected for months - it can be done for weeks or something else...
+merged$timecut <- cut(merged$timestamp2,"months")
+
+# for all users separated by month
+table <- data.frame(time = merged$timecut, user = merged$user)
+table(table$time)
+table.unique <- (unique(table))
+plot(table(table.unique$time))
+
+# for all edits separated by month
+table <- data.frame(time = merged$timecut, user = merged$revid)
+table(table$time)
+table.unique <- (unique(table))
+plot(table(table.unique$time))
+
+
+
+
+
+#### useful up to here, but not further #######
+
 data.zoo<- zoo(merged$user, merged$timestamp2)
 time(data.zoo) <- as.yearmon(time(data.zoo))
 
@@ -44,15 +64,113 @@ levels(merged$user) <- c("A","B","C","D","E","F","G","H","I","J","K","A","B","C"
 dput(merged$timestamp)
 dput(merged$user)
 
+table <- data.frame(time = merged$timestamp, user = merged$user)
+data.zoo<- zoo(table)
+
+#how many edits = sama asi...
+table <- data.frame(timestamp = merged$timestamp, revid = as.factor(merged$revid))
+#data.zoo<- zoo()
+time(data.zoo) <- as.yearmon(time(data.zoo))
+
+
+plot(rollmean(data.zoo, 3))
+
+
 rollapply(data.zoo, 3, function(x) length(unique(x["user"])), by.column = FALSE,   align = "left")
 
-rollapply(data.zoo$user, 3, function(x) length(unique(x)), align = "left", partial = TRUE) 
+rolled <- rollapply(data.zoo$user, 3, function(x) length(unique(x)), align = "left", partial = TRUE) 
+plot(rolled)
+
+rolled <- rollapply(data.zoo$revid, 108, function(x) length(unique(x)), align = "left", partial = TRUE) 
+plot(rolled)
+
+
+table <- data.frame(category= c("one", "two", "one", "one", "one", "one"), timestamp = c(3,3,3,3,4,6))
+data.zoo<- zoo(table)
+rolled <- rollapply(data.zoo$category, 3, function(x) length(unique(x)), align = "left", partial = TRUE) 
+plot(rolled)
+
+DF <- data.frame(time = 1:4, x = 1:4, f = factor(letters[c(1, 1, 2, 2)]))
+
+zx <- zoo(DF$x, DF$time)
+zf <- zoo(DF$f, DF$time)
+
+library(PerformanceAnalytics)
+row.names(table) <- as.yearmon((merged$timestamp))
+apply.rolling(table, 2, trim = TRUE, gap = 12, by = 1, FUN = "mean")
+
+
+DF2 <- data.frame(x = zx, f = zf)
+
+
 
 rollapply(data.zoo, 3, function(x) length(unique(x["category"])), by.column = FALSE,   align = "left")
 
-
+library(vioplot)
 plot(merged_table$timestamp2,rep(1, length(merged_table$timestamp2)), type= "h")
 axis.Date(1,at=merged_table$timestamp3,labels=format(merged_table$timestamp3,"%b-%d"),las=2)
+#vioplot(merged_table$timestamp2)
+
+
+# n = number of days
+n <- 30
+# w = window width. In this example, w = 7 days
+w <- 7
+
+# I will simulate some data to illustrate the procedure
+data <- rep(1:n, rpois(n, 2))
+
+# Tabulate the number of occurences per day:
+# (use factor() to be sure to have the days with zero observations included)
+date.table <- table(factor(data, levels=1:n))  
+
+
+data <- sample(seq(as.POSIXct("2012/01/01"),as.POSIXct("2012/01/31"),by="hours"), 30)
+
+date.table <- table(cut(merged$timestamp2,"months"))
+
+
+plot(date.table)
+
+
+mat <- diag(n)
+for (i in 2:w){
+  dim <- n+i-1
+  mat <- mat + diag(dim)[-((n+1):dim),-(1:(i-1))]
+}
+
+
+roll.mean.7days <- date.table %*% mat
+
+
+
+library(xts)
+x <- structure(c(867L, 891L, 901L, 991L, 1085L, 1114L, 1117L, 1151L, 
+                 1174L, 1268L, 1384L, 1403L, 1550L, 1596L, 1608L), .Dim = c(15L, 1L),
+               index = structure(c(1280960887, 1280964672, 1280966285, 
+                                   1280997350, 1281014882, 1281017687, 1281018106, 1281023184, 1281025529, 
+                                   1281050369, 1281096942, 1281108126, 1281176749, 1281207496, 1281215744),
+                                 tzone = "", tclass = c("POSIXct", "POSIXt")), class = c("xts", "zoo"),
+               .indexCLASS = c("POSIXct", "POSIXt"), tclass = c("POSIXct", "POSIXt"),
+               .indexTZ = "", tzone = "")
+# first count the number of observations each day
+xd <- apply.daily(xts_1, length)
+# now sum the counts over a 2-day rolling window
+x2d <- rollapply(xd, 2, sum)
+# align times at the end of the period (if you want)
+y <- align.time(x2d, n=60*60*24)  # n is in seconds
+
+
+
+#something with xts solves this!
+
+
+df <- table
+
+xts_1 <- xts(df[,2],order.by=as.Date(df[,1]))
+
+# And the answer is.... 
+roll.mean.7days <- date.table %*% mat
 
 
 plot(merged$timestamp2,rep(1, length(merged$timestamp2)), type= "h")
