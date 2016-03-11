@@ -28,3 +28,14 @@ Added new function: to import all contributions within a wikipedia (must know to
 2. Run convert_all.py to create allusers.csv
 3. This can be analyzed with script all_users.R (now stuck at getting the time series read)
 
+For analyzing wikipedia competitions. (11.03.2016)
+
+Files that matter are import_wikipedia_users_comp.py, convert_all_contribs.py, contribs_all_authors_max.py, scriptone2.R
+
+They need to be configured for particular competitions and may not work alwasy (e.g. there are some problems initially with "-" in the pagenames. Possibly this has an easy fix)
+
+1. Run import_wikipedia_users_comp.py to get names of articles and users in the competition. Save them to a file (have to copy the commands from import_wikipedia_users.py).
+2. Run contribs_all_authors_max.py with the required parameters, primarily need to read the usernames into it and specify the duration of the competition (start=later time, end=earlier time). You can see the results in the .txt file generated.
+3. Run convert_all_contribs.py on the generated .py file. This will convert it into a csv with "@" as separator.
+4. Open scriptone2.R to look at the csv. There you need to open the lists of articles, take the subset of the contributions with the list of articles, and sum the sizediffs together.
+
