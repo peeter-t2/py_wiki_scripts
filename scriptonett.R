@@ -14,18 +14,28 @@ titles <- c("Norra küberkaitse", "Norra kaitsevägi", "Norra kuninglik mereväg
 
 #Take only articles from list
 results <- contribs[contribs$title %in% c(titles,titles2),c('pageid','title','timestamp','userid','revid','user', 'size', 'sizediff', 'timestamp2')]
-
 # write as csv
 write.table(results, "results_tt.csv", sep = ";", fileEncoding = "WINDOWS-1252", row.names = TRUE, col.names = TRUE, quote= FALSE)
 
 # aggregate and sum the diffs by person for total contribution
 agg_results <- aggregate(sizediff~user,FUN=sum, data=results)
-
 #write as csv
 write.table(agg_results, "agg_results_tt.csv", sep = ";", fileEncoding = "WINDOWS-1252", row.names = TRUE, col.names = TRUE, quote= FALSE)
-
 #total for all aritcles&authors from the list
 sum(agg_results$sizediff)
+
+#with absolute values, no substraction
+results$absdiff <- abs(results$sizediff)
+write.table(results, "results_tt.csv", sep = ";", fileEncoding = "WINDOWS-1252", row.names = TRUE, col.names = TRUE, quote= FALSE)
+
+# aggregate and sum the diffs by person for total contribution
+agg_results <- aggregate(absdiff~user,FUN=sum, data=results)
+#write as csv
+write.table(agg_results, "agg_results_tt_abs.csv", sep = ";", fileEncoding = "WINDOWS-1252", row.names = TRUE, col.names = TRUE, quote= FALSE)
+#total for all aritcles&authors from the list
+sum(agg_results$absdiff)
+
+
 
 
 #############IRRELEVANT FROM HERE################
