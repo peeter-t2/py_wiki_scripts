@@ -1,6 +1,6 @@
 options(scipen=5)
 
-contribs <- read.csv("contribs_all.csv", header = TRUE, sep = "@", quote = "\"", dec = ".", fill = TRUE, comment.char = "", encoding="UTF-8")
+contribs <- read.csv("allusers_dump_14.01.2016.csv", header = TRUE, sep = "@", quote = "\"", dec = ".", fill = TRUE, comment.char = "", encoding="UTF-8")
 
 contribs$timestamp2 <- as.POSIXct(contribs$timestamp, origin="1970-01-01")
 
