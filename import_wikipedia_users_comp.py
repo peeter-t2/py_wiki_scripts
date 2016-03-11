@@ -15,6 +15,7 @@ wikipedia.set_lang("et")
 
 #Test on one page:
 #To get the pages utf-8 can be used in the query
+#Töötab Jõgevamaa, aga mitte Lääne-viruga, mingi jama on sidekriipsuga
 m = wikipedia.page("Vikipeedia:Jõgevamaa artiklivõistlus/Registreerimine")
 #m = wikipedia.page("Vikipeedia:Ida-virumaa artiklivõistlus/Registreerimine")
 #The following does not get the same results
