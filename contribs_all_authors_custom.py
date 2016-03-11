@@ -17,7 +17,7 @@ pprint(allusers)
 test=[]
 total = 1#86787
 
-allusers= ["Kuuskinen", "Sacerdos79", "Njosnavelin", "Mesimumm", "Geonarva", "Daniel_charms", "Krr005", "Tkivisik", "Ottosson74", "Morel", "03jansa", "Metsavend", "Kaspaar"", ""SinineKaelkirjak", "AinAnepaio", "Nefjool", "Helen Verev", "KungFuDuck", "Teilolondon", "Estonianstudents", "Epp", "Avjoska", "Athanasius_Soter", "Astromaailm", "Evelyn111090", "Juhan121", "Mari203", "Marken.raudnagel", "Accuphase", "Sjur", "Maareti", "Ahsoous", "Domini4kanna", "Roosinomm", "8kart", "Viisaar", "hs1802", "AnonüümneLeemur", "Avetoelpt"]
+allusers= ["Kuuskinen", "Sacerdos79", "Njosnavelin", "Mesimumm", "Geonarva", "Daniel_charms", "Krr005", "Tkivisik", "Ottosson74", "Morel", "03jansa", "Metsavend", "Kaspaar", "SinineKaelkirjak", "AinAnepaio", "Nefjool", "Helen Verev", "KungFuDuck", "Teilolondon", "Estonianstudents", "Epp", "Avjoska", "Athanasius_Soter", "Astromaailm", "Evelyn111090", "Juhan121", "Mari203", "Marken.raudnagel", "Accuphase", "Sjur", "Maareti", "Ahsoous", "Domini4kanna", "Roosinomm", "8kart", "Viisaar", "hs1802", "AnonüümneLeemur", "Avetoelpt"]
 
 for user in allusers:
     print(user)
@@ -25,7 +25,7 @@ for user in allusers:
     #rev = allusers.next()
     #pprint(rev["name"])
     #contribs = site.usercontributions(rev["name"], prop =['size','sizediff'])
-    contribs = site.usercontributions(user, start='2015-04-21T23:59:59Z', end='2015-02-21T00:00:01Z',  prop ='title|timestamp|ids|title|size|sizediff')
+    contribs = site.usercontributions(user, start='2015-04-21T21:59:59Z', end='2015-02-20T22:00:01Z',  prop ='title|timestamp|ids|title|size|sizediff')
     #contribs = site.usercontributions("Metsavend", prop =['size','sizediff','ids','title','timestamp','comment','size','flags'])
     #rev2 = contribs.next()
     #pprint(rev2)
