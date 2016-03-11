@@ -34,8 +34,8 @@ Files that matter are import_wikipedia_users_comp.py, convert_all_contribs.py, c
 
 They need to be configured for particular competitions and may not work alwasy (e.g. there are some problems initially with "-" in the pagenames. Possibly this has an easy fix)
 
-1. Run import_wikipedia_users_comp.py to get names of articles and users in the competition. Save them to a file (have to copy the commands from import_wikipedia_users.py).
-2. Run contribs_all_authors_max.py with the required parameters, primarily need to read the usernames into it and specify the duration of the competition (start=later time, end=earlier time). You can see the results in the .txt file generated.
-3. Run convert_all_contribs.py on the generated .py file. This will convert it into a csv with "@" as separator.
-4. Open scriptone2.R to look at the csv. There you need to open the lists of articles, take the subset of the contributions with the list of articles, and sum the sizediffs together.
+1. Run import_wikipedia_users_comp.py to get names of articles and users in the competition. Save them to a file (have to copy the commands from import_wikipedia_users.py). #Py 3.5
+2. Run contribs_all_authors_max.py with the required parameters, primarily need to read the usernames into it and specify the duration of the competition (start=later time, end=earlier time). You can see the results in the .txt file generated. #Py 2.7
+3. Run convert_all_contribs.py on the generated .py file. This will convert it into a csv with "@" as separator. #Py 3.5
+4. Open scriptone2.R to look at the csv. There you need to open the lists of articles, take the subset of the contributions with the list of articles, and sum the sizediffs together. #R
 
