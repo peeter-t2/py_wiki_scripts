@@ -2,7 +2,7 @@
 
 This code snippet builds on https://github.com/peeter-t2/Py_Retrieve_wikipedia_course_comments and is has a rather complex work-flow to solve practical issues. 
 
-It relies on modules "wikipedia", "re", "itertools", "_pickle", as the other script.
+It relies on modules "wikipedia", "re", "itertools", "_pickle", as the other script. Now also "mwclient" module is needed.
 
 It has been tested on Windows 10, and designed for Windows environments. Main difference between op-systems may be in character encoding, which probably makes Windows more complicated to work with.
 
