@@ -23,7 +23,8 @@ agg_results <- aggregate(sizediff~user,FUN=sum, data=results)
 #write as csv
 write.table(agg_results, "agg_results_tt.csv", sep = ";", fileEncoding = "WINDOWS-1252", row.names = TRUE, col.names = TRUE, quote= FALSE)
 
-
+#total for all aritcles&authors from the list
+sum(agg_results$sizediff)
 
 
 #############IRRELEVANT FROM HERE################
