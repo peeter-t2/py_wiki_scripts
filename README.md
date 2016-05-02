@@ -41,3 +41,12 @@ They need to be configured for particular competitions and may not work alwasy (
 3. Run convert_all_contribs.py on the generated .py file. This will convert it into a csv with "@" as separator. #Py 3.5
 4. Open scriptone2.R to look at the csv. There you need to open the lists of articles, take the subset of the contributions with the list of articles, and sum the sizediffs together. #R
 
+
+With a fixed list (01.04.2016) 
+
+1. Collect comma-separated usernames into format "username1", "username2" and put them into the array allusers in contribs_all_authors_custom.py. quote marks can be added in find+replace in notepad++ or elsewhere.
+2. Add the date in question. UTC+3 = subtract 2 hours from absolute times. start = finishing date and end = starting date, because the way wikipedia processes the command.
+3. Name output files and run the contribs_all_authors_custom.py. #Py 2.7
+4. Run convert_all_contribs.py on the generated .py file. This will convert it into a csv with "@" as separator. #Py 3.5
+5. Open the output file with scriptonett.R, add the fixed list of titles to the variables into titles1-5 variables. R can't deal with too long hard-coded lists, so need to split.
+6. Run the commands, the last one sum(agg_results$absdiff), gets the number needed to evaluate wiki-competitions.
