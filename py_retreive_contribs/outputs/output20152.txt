@@ -1,0 +1,63 @@
+== ÜLES LAETUD ==
+[[Pilt:Nixie2.gif|thumb|200x200px|Kümme GN-4 toru numbrit.]]
+'''Nixie toru''' on [[huumlahendus]]<nowiki/>el põhinev elektrooniline külmkatoodseade või -lamp, mis on loodud kuvamaks numbreid, kuid vahel ka muid sümboleid.<ref name="Vintagecalculators">Nigel Tout, [http://www.vintagecalculators.com/html/calculator_displays.html#ColdCathode Calculator Displays] [Vaadatud: 05.11.2015]</ref>
+[[Pilt:Inside_the_nixie_tube_vnutri_u_nei_neonka.jpg|thumb|Nixie toru siseehitus]]
+Klaasist kesta sisse on asetatud võrgukujulise ehitusega [[anood]] ning iga kuvatava numbri või sümboli kohta üks [[katood]]. Tekitades anoodi ja katoodi vahele piisavalt suure pinge, hakkab viimane oranžikalt helendama. Seade on täidetud madala tihedusega [[Penningi segu]]<nowiki/>ga, mis koosneb peamiselt [[neoon]]<nowiki/>ist, kuid leidub lisandina ka [[elavhõbe]]<nowiki/>dat või [[argoon]]<nowiki/>i.<ref name="Weston 1968 334">Weston, G.F. (1968), Cold Cathode Glow Discharge Tubes, London</ref><ref name=":2">Bylander, E.G. (1979), Electronic Displays, New York</ref><nowiki/>
+
+== Ajalugu ==
+[[Pilt:NixieFrequencyCounter.jpg|right|thumb|Systron-Donneri sagedusloendur aastast 1973. mis kasutab kuva jaoks Nixie lampe.]]
+Esimene teadaolev [[patent]] indikaatorlambile võeti 9. mail 1934 USAs, kui Hans Paul Boswau esimesena selletaolist seadet kirjeldas. Tähelepanuväärne on, et see juhtus juba aastal 1934, kuna sel ajal ei ole teada mitte ühegi indikaatorlambi tootmist. <ref name=":0">[http://www.jb-electronics.de/html/elektronik/nixies/n_nixie_geschichte.htm?lang=en History of the Nixie tube] [Vaadatud 05.11.2015]
+</ref>
+
+Esimesed patendid, mis kirjeldavad loetava kuvaga lampe, võeti aastal 1950 firmale Nortrop Aircraft Inc., mis tegeles lennukite tootmisega Ameerika Ühendriikide armeele. Siiski pole ühtki tõendit, et nad oleksid kunagi selliseid lampe tootnud. Mõni aeg hiljem, aastal 1954, tuli firma nimega National Union välja oma seadmega, GI-10, mida nad kutsusid Inditroniks<ref name=":0" />
+
+Peale National Unioni tegelesid indikaatorlampide tootmisega ka Burroughsi poolt üle ostetud Haydu Brothers. Aastal 1955 tulid nad välja oma lambiga HB-106. Siiski ei leiutanud Haydu Brothers neid ise, vaid oli tõenäoliselt vaid tootmisfirmaks Burroughsile.<ref name=":0" /> Nende juurest pärineb väidetavalt ka Nixie toru pooljuhuslik nimetus. Üks inseneridest kirjutas oma joonise ülaosasse "NIX 1", mis oli lühendiks fraasile: "''Numeric Indicator eXperimental No. 1''", sealt hakkasid tema kollegid seda kutsuma Nixie'ks, mis jäigi püsima.<ref>Alan Sobel, [http://www.decodesystems.com/nixie-history.html Origins of the Nixie tube] [Vaadatud 05.11.2015]</ref>
+
+Aastatel 1950 kuni 1990 tootsid mitmed eri firmad oma versioone. Nad kasutasid nimesid nagu Digitron, Inditron ja Numicator, kuna Burroughs oli esimene, kes tõi Nixie torud turule ning omas vastava nimega kaubamärki. Kuigi seadme tehniline nimetus on külma katoodiga neoonlamp, siis rahvasuus on see siiski tuntud kui Nixie toru.
+
+== Disain ==
+Nixie torus on tavaliselt 10 painutatud traadist numbrit (0–9), tähte või muud sümbolit, mõnikord ka punkt või koma, mis toimivad lambi katoodidena ning üks võrestik anoodiks. Katoodid ja anood on kõik omavahel elektriliselt eraldatud keraamiliste seibidega. Kogu seadeldis paigutatakse hermeetiliselt suletud klaasist kesta sisse, millest tuuakse välja vajalikud elektrilised ühendused. <ref name=":1">Woodford, Chris [http://www.explainthatstuff.com/how-nixie-tubes-work.html Nixie Tubes]  [Vaadatud 06.11.2015]</ref>
+
+Nixie toru võib küll välimuselt meenutada vaakumtoru, kuid nende tööpõhimõtted on siiski oluliselt erinevad. Vaakumtorud toimivad [[termoemissioon]]<nowiki/>i põhimõttel. Nixiedel seevastu puudub nii võre soojendaja kui ka kontrollvõre ning toimib vaid ühe anoodi ja katmata katoodide abil. Seetõttu nimetataksegi neid külmkatoodlampideks (üht tüüpi [[gaaslahenduslamp]]) või [[Neoonlamp|neoonlambi]] erijuhuks. Isegi äärmuslike kasutusjuhtude juures toatemperatuuril kuumenevad Nixie torud harva üle 40 °C (104 °F).<ref name=":2" /><nowiki/>
+
+== Tööpõhimõte ==
+Selleks, et kuvada soovitud numbrit, tuleb tekitada elektriline [[Pinge (elekter)|pinge]] anoodi ja katoodi vahele. Tavaliselt on see umbes 170–180 V alalispinget, mille juures hakkab vastav number oranžikalt helendama või n-ö süttib. Samas on lambi tööpinge 20–30 V madalam ning kasutab oma tööks umbes 1–5 mA voolu, mille piiramiseks kasutatakse tavaliselt anoodiga jadamisi takistit suurusega mõningad tuhanded [[oom]]<nowiki/>id.<ref>Onno, [http://www.glowbug.nl/neon/HowToDriveNixies.html How to drive Nixie tubes] [Vaadatud 06.11.2015]</ref>
+
+Tekitades anoodvõre ja ühe katoodi vahele piisavalt kõrge pinge, lõhustuvad mõned klaaskestas oleva madalarõhulise gaasi [[Molekul|molekulid]] positiivselt laetud [[Ioon|ioonideks]] ja [[Elektron|elektronideks]]. Ioonid tõmmatakse negatiivselt laetud katoodi poole (traadist sümbol) ning elektronid anoodvõre poole – kõik see liikumine tekitabki voolu läbi toru.
+
+Oma teekonnal katoodi poole põrkuvad ioonid lõhustumata molekulide vastu, lükates neidki katoodi poole. Ioonide ja gaasimolekulide põrkumine vastu katoodi põhjustab viimase küljest metalliaatomite eraldumise ehk pihustumise keskkonda. Need pihustatud aatomid omakorda saavad kokku elektronidega, neelavad energiat, ergastuvad, muutuvad ebastabiilseks ning kaotavad oma energia kiirates footoneid ning tekitades nähtava kuma.
+
+Tähelepanelikul jälgimisel võib näha, et katoodi ja helenduse vahel on õhuke täiesti tume nn Astoni ala. Seda põhjustab fakt, et katoodi lähedal on elektrone väga vähe ja neid ei ole palju energiat, seega kokkupõrke tõenäosus metalli aatomiga on väike ja isegi kui see juhtub, ei ole sel piisavalt energiat, et aatomit valgust kiirgama ergastada. Seetõttu ongi ala tume. Natuke eemal on elektronid kiirust kogunud ja neid on rohkem, seal saavad elektronid aatome ergastada ja panna neid valgust kiirgama.<ref name=":1" />
+
+== Kasutusviisid ja eluiga ==
+[[Pilt:ZM1210-operating.jpg|thumb|Nixie lambi ZM1210 reastatud katoodid]]
+Numbrilise kuva jaoks mitmetes vanades digitaalsetes voltmeetrites, multimeetrites, sagedusloendurites ja muudes tehnilistes mõõteriistades kasutati just Nixie torusid. Samuti võis neid leida kallites sõjaväele ja teadusloomele mõeldud digitaalsetes kellades. Lisaks kasutati Nixie'sid mitmetes lauakalkulaatorites, kaasa arvatud esimeses, ANITA Mk VII <ref>Vintage Web Calculators Web Museum [http://www.vintagecalculators.com/html/anita_mk_vii.html Anita Mk VII] [Vaadatud 06.11.2015]</ref> ning isegi telefonikeskjaamades ja mõningates liftides korrusenumbri tähistajana. Hilisemad 14-segmendilised tähtnumbrilised versioonid leidsid kasutust lennujaamade teadetetahvlites ja börside ekraanides.
+
+Nixie torude tavaline tootja poolt pakutud eluiga on vahemikus 5000 kuni 200 000 tundi<ref>Burroughs Corporation [http://www.coldwarcreations.com/pdf/burroughslifespan.pdf NIXIE Indicator Tubes] [Vaadatud 06.11.2015]</ref>, mis on enamasti võrdlemisi tagasihoidlik hinnang ning reaalsuses, korrektse kasutamise korral on eluiga veelgi pikem. Lisaks ei ole defineeritud see, mida tähendab Nixie eluea lõpp. Osaliselt levinud arvamuse kohaselt<ref name="Weston 1968 334" /> võib lambi riknemiseks lugeda juba seda, kui mõni sümbol on osaliselt katoodimürgistusest tuhmunud või kui leidub helendust mõnes muus toru osas.
+
+Nixie torud on oma ehituselt haprad ning on vastuvõtlikud mitmetele erinevatele riknemistele, nagu näiteks
+* lihtne purunemine;
+* mõrad ja lekked klaaskestas, mis lasevad välisõhu lambi sisse;
+* katoodimürgistus, mille tõttu mõni sümbol muutub osaliselt mittehelendavaks;
+* süttimispinge tõus aja jooksul, mis põhjustab lambi värelemise ja mitte süttimise;
+* elektroodiosakeste klaasi pinnale pihustumisest põhjustatud tuhmumine;
+* sisemised lühised või lahtiühendused, mis võivad olla põhjustatud füüsilisest väärkohtlemisest või osakeste pihustumisest.
+Üks olulisimaid põhjuseid Nixie'de enneaegseks riknemiseks on neile pinge ja eriti voolu rakendamine, mille suurused jäävad kõrgemale määratletud tasemetest. See toob kaasa suure elektroodi osakeste pihustumise, mis omakorda vähendab seadme eluiga. Eriti ekstreemsetes olukordades võib esineda toru täielik mahapõlemine ja hävinemine.
+
+Nõukogude Liidus toodeti Nixie torusid veel kuni aastani 1980, seega on neid Venemaal ja Ida-Euroopa riikides alles veel hulgi.
+
+== Alternatiivid ja järeltulijad ==
+[[Pilt:Neon sign, "CHANGE".jpg|thumb|Silt, milles on kasutatud neoonlampe]]
+Samaaegselt Nixie'dega kasutati numbrilise kuva jaoks ka mitmeid teisi tehnoloogiaid. Näiteks olid kasutusel taustvalgustusega pooläbipaistvad ekraanid, valgustorud, taustprojektsiooni ja äärvalgustust kasutavad kuvarid - kõik, mis kasutasid oma valguse kiirgamiseks hõõg- või neoonlampe. Lisaks leidus 7-segmendilisi seadmeid nagu Numitroni<ref>Vincent Wood, [http://www.decodesystems.com/numitron.html Numitron readout] [Vaadatud 06.11.2015]</ref> ja Panaplexi<ref>Lindsay Wilson, [http://www.imajeenyus.com/vacuum/20100814_panaplex/ Panaplex display] [Vaadatud 06.11.2015]</ref>. Veel üheks oluliseks kasutusel olnud tehnoloogiaks olid esimesed [[Luminofoorlamp|luminofoorlambid]]. Enne Nixie torude tulekut kasutati numbrite kuvamiseks peamiselt mehaanilisi lahendusi, kas otseselt samm-mehhanismidega liigutati silindrile prinditud numbreid või kaudselt ühendades kontakte kokku vastavate indikaatorlampidega.
+
+Umbes aastast 1970 hakkasid uued tehnoloogiad nagu valgusdioodid (LED) ja luminofoorkuvarid (VFD), peamiselt seitsmesegmendilistena, Nixie torusid välja tõrjuma. Peamiseks põhjuseks oli uute lahenduste suurem töökindlus ja efektiivusus ning lihtsam kasutamine. Kui Nixie torud vajavad oma tööks võrdlemisi kõrgeid pingeid (180 V), siis LEDid ja VFDd saavad hakkama palju vähemaga, mis muudab neid kontrollivad seadmed tunduvalt lihtsamaks ja odavamaks.
+
+== Taassünd ==
+[[Pilt:Nixie_clock.jpg|right|thumb|A Nixie clock with six ZM1210 tubes made by Telefunken.]]Kuigi tänapäevased tehnoloogiad on odavamad, lihtsamad ja efektiivsemad kui kunagised Nixie torud, siis leidub palju elektroonikaentusiaste, kes leiavad, et uued tehnoloogiad on võitnud igas kategoorias peale ilu. Tänapäevased LED ja LCD ekraanid kiirgavad vaid külma valgust. <ref>N. Zeldes, [http://www.nzeldes.com/HOC/Digits.htm Beautiful digits] [Vaadatud: 06.11.2015]</ref> IEEE assotsiatsiooni liige ja Sphere Research Corporationi omanik Walter Shawlee II on Nixie'de kohta öelnud: "Need on kui väiksed elektroonilised lõkked." Tõenäoliselt just seetõttu on tänapäeval entusiastid hakanud looma seadmeid, mis kasutavad Nixie torusid. 
+
+Müümata jäänud Nixie'd tuuakse ladudest välja ja võetakse kasutusele peamiselt kellades, mis on mõnevõrra irooniline, kuna vanasti olid need liiga kallid, et kasutada majapidamisseadmetes. See äkiline nõudluse suurenemine ja Nixie'de haruldus on tõstnud nende hinna kahe- või kolmekordseks (vahemikus 1998–2005). <ref>Glenn Zorpette, [http://spectrum.ieee.org/consumer-electronics/gadgets/new-life-for-nixies New Life For Nixies] IEEE Spectrum [Vaadatud 06.11.2015]</ref> Kõige suurem teadaolev kollektsionääri poolt omatud Nixie toru on Rodan CD47/GR-414 (220 mm kõrge) <ref>Dieter Wächter, [http://www.tube-tester.com/sites/nixie/data/cd47-gr414.htm Rodan CD47/GR-414] [Vaadatud 06.11.2015]</ref>, mida on müüdud sadade dollarite eest, kuid sellised torud on väga haruldased.
+
+Nixie torusid võib näha ka filmis "[[Tomorrowland]]", kus nendest on valmistatud maailma lõpuni jäänud aja loendur.
+
+== Viited ==
+<references />
