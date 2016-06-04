@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+###########################
+# Author: Peeter Tinits
+# Created: 24/11/2015
+###########################
 
 import wikipedia
 import re

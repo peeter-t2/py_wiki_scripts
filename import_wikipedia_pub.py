@@ -4,6 +4,12 @@
 #print(nmn)
 #edited C:\Users\Meduus\AppData\Local\Programs\Python\Python35-32\Lib\site-packages\wikipedia\wikipedia.py
 # to include 'Kasutaja' instead of 0 in line 611 for namespace
+###########################
+# Author: Peeter Tinits
+# Created: 24/11/2015
+###########################
+
+
 
 import wikipedia
 import re
