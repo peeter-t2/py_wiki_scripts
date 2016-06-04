@@ -42,10 +42,10 @@ for pagename in pages:
         #if a "PageError" was raised, ignore it and continue to next link
         pass
     
-out_file = open("pages_all_vv.txt",'w')
+out_file = open("outputs/pages_all_vv.txt",'w')
 #out_file.write('\n***************************\n'.join(test))
 out_file.write("\n".join(str(s) for s in test))
 out_file.close()
 
-cPickle.dump(test, open('pagess_all_vv.p', 'wb'), 2)
+cPickle.dump(test, open('outputs/pagess_all_vv.p', 'wb'), 2)
 

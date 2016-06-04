@@ -6,45 +6,24 @@ import cPickle
 import codecs
 import re
 
-#used this https://github.com/mwclient/mwclient/wiki/Tutorial:Creating-a-page-listing-all-pages-in-a-category
-
-links = cPickle.load(open('save2.p', 'rb'))
+#links = cPickle.load(open('outputs/save2.p', 'rb'))
 
 
-site = mwclient.Site('en.wikipedia.org')
+site = mwclient.Site('et.wikipedia.org')
 
 #allpages= site.allpages()
 #allcategories= site.allcategories()
 list1 =[]
-#print(site.Categories['Biology'])
-#for page in site.Categories['Biology']: #'Surnud 1390']:
-#    print(page.name)
+print(site.Categories['Bioloogia'])
+for page in site.Categories['Bioloogia']: #'Surnud 1390']:
+    print(page.name)
     #print(page.text())
     #results = re.findall('==((\w+)|(\s+)){1,9}==', page.text())
     #results = re.findall('=+[a-zA-ZõäöüÕÄÜÖ ]+=+', page.text())
-#    results = re.findall('=+[\w ]+=+', page.text())
-#    print(results)
+    results = re.findall('=+[\w ]+=+', page.text())
+    print(results)
     #list1.append(site.Pages[page.name].text())
-#print(list1)
-
-text = ''
-def listpages(category):
-    text = ''
-    #list1 = []
-    for page in category:
-        print(page.name)
-        if page.namespace == 14:  # 14 is the category namespace
-            text += listpages(page)
-            #list1.append(listpages(page))
-        else:
-            text += "* " + ' '.join(re.findall('=+[\w ]+=+', page.text())) + "\n"
-            #list1.append("* " + re.findall('=+[\w ]+=+', page.text()) + "\n")
-            print(text)
-    return text
-
-text += listpages(site.Categories['Biology'])
-#text.append(listpages(site.Categories['Biology']))
-
+print(list1)
 #pprint(allusers)
 test=[]
 total = 1#86787
@@ -76,5 +55,5 @@ for pagename in pages:
 #out_file.write("\n".join(str(s) for s in test))
 #out_file.close()
 
-cPickle.dump(test, open('contribs_all_max.p', 'wb'), 2)
+cPickle.dump(test, open('outputs/contribs_all_max.p', 'wb'), 2)
 

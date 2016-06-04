@@ -8,7 +8,7 @@ import _pickle as cPickle
 from time import mktime
 
 
-test = cPickle.load(open('contribs_all.p', 'rb'))
+test = cPickle.load(open('outputs/save_contribs.p', 'rb'))
 
 #print(test)
 
@@ -19,7 +19,7 @@ print(len(test))
 for item in test:
     item["timestamp"] = mktime(item.get("timestamp"))
 
-with open('allusers.csv', 'w', encoding='utf-8', newline='') as output_file:
+with open('outputs/people.csv', 'w', encoding='utf-8', newline='') as output_file:
     #print(keys)
     # @ works here
     dict_writer = csv.DictWriter(output_file, keys, delimiter='@')

@@ -5,7 +5,7 @@ import cPickle
 
 
 
-links = cPickle.load(open('save2.p', 'rb'))
+#links = cPickle.load(open('save2.p', 'rb'))
 
 
 site = mwclient.Site('et.wikipedia.org')
@@ -35,10 +35,10 @@ for counter in range(total):
         #if a "PageError" was raised, ignore it and continue to next link
         pass
     
-out_file = open("contribs_all_max.txt",'w')
+out_file = open("outputs/contribs_all_max.txt",'w')
 #out_file.write('\n***************************\n'.join(test))
 out_file.write("\n".join(str(s) for s in test))
 out_file.close()
 
-cPickle.dump(test, open('contribs_all_max.p', 'wb'), 2)
+cPickle.dump(test, open('outputs/contribs_all_max.p', 'wb'), 2)
 
