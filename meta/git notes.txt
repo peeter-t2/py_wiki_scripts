@@ -1,0 +1,17 @@
+they couldn't deal with linespace in directory structure...
+
+If you want to merge project-a into project-b:
+
+cd path/to/project-b
+git remote add project-a path/to/project-a
+git fetch project-a
+git merge project-a/master # or whichever branch you want to merge
+git remote remove project-a
+
+http://stackoverflow.com/questions/1425892/how-do-you-merge-two-git-repositories
+
+
+also for future potentially
+
+http://stackoverflow.com/questions/12293944/how-to-find-the-path-of-the-local-git-repository-when-i-am-possibly-in-a-subdire
+
